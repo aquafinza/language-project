@@ -16,10 +16,10 @@
       </p>
     </section>
     
-    <div class="hearts">
-      <img src="https://64.media.tumblr.com/cb8dc32ddf16a1a80e01e742c4063b75/tumblr_p9noqbK0y21qzm8dwo1_500.gifv" alt="a spinning pink glass heart">
-      <img src="https://i.pinimg.com/originals/a4/f1/4c/a4f14c53e1c7c6ee1d8e1717f8d4d26f.gif"  alt="a spinning purple glass heart">
-      <img src="https://64.media.tumblr.com/a071d07270d2f4e3563d115784daf7d3/tumblr_p3y2imQ0Hf1qzm8dwo1_400.gifv" alt="a spinning blue glass heart">
+    <div>
+      <img src="https://64.media.tumblr.com/cb8dc32ddf16a1a80e01e742c4063b75/tumblr_p9noqbK0y21qzm8dwo1_500.gifv" alt="a spinning pink glass heart" class="pink-heart">
+      <img src="https://i.pinimg.com/originals/a4/f1/4c/a4f14c53e1c7c6ee1d8e1717f8d4d26f.gif"  alt="a spinning purple glass heart" class="purple-heart">
+      <img src="https://64.media.tumblr.com/a071d07270d2f4e3563d115784daf7d3/tumblr_p3y2imQ0Hf1qzm8dwo1_400.gifv" alt="a spinning blue glass heart" class="blue-heart">
     </div>
     
   </body>
@@ -66,10 +66,24 @@
     padding-left: 50px;
     padding-right: 50px;
     align-content: center
-
-    
+}
+  
+  .blue-heart {
+    height: 115px;
+  } 
+  
+  .purple-heart {
+    height: 115px;
+  }
+  
+  .pink-heart {
+    height: 115px;
+    padding-left: 120px
     
   }
+  
+  
+  
   h1 {
     color: #FEFEFE;
     font-size: 40px;
@@ -85,10 +99,40 @@
   font-family: "DotGothic16", sans-serif;
   color: #FFFFFF;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end); 
     
   }
     
-   
+   p:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+p a{
+  color: white;
+  text-decoration: none;
+}
+
+span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
     
   
   
