@@ -7,11 +7,20 @@
   </head>
 
   <body>
-    <section>
-      <h1>LOVE &amp; LANGUAGES</h1>
-      <p>
-        welcome to my language learning journey.
-      </p>
+    <h1>LOVE &amp; LANGUAGES</h1>
+    <p>
+      welcome to my language learning journey.
+    </p>
+    <section class="gallery">
+      <img src="french2.jpg" alt="description of image">
+      <img src="jap3.jpg" alt="description of image">
+      <img src="french4.jpg" alt="description of image">
+      <img src="spanish1.jpg" alt="description of image">
+      <img src="french6.jpg" alt="description of image">
+      <img src="spanish2.jpg" alt="description of image">
+      <img src="jap2.jpg" alt="description of image">
+      <img src="jap4.jpg" alt="description of image">
+      <img src="spanish4.jpg" alt="description of image">
     </section>
 
     <div class="hearts-group">
@@ -60,6 +69,18 @@
     }
   }
 
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+
+  }
+
+  .gallery>img {
+    width: 200px;
+
+  }
+
   .hearts-group {
     display: flex;
     flex-wrap: nowrap;
@@ -83,7 +104,7 @@
   h1 {
     color: #FEFEFE;
     font-size: 40px;
-    font-family: 
+    font-family:
     text-align: center;
     background-image: url(downloads/pink-heart.jpg);
     padding: 10px;
