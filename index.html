@@ -3,23 +3,59 @@
   <head>
     <meta charset="utf-8">
     <title>love &amp; languages</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=DotGothic16&family=Shippori+Mincho+B1:wght@500&display=swap" rel="stylesheet">
 
   </head>
 
   <body>
     <h1>LOVE &amp; LANGUAGES</h1>
-    <h2></h2><span></span>
-    <section class="gallery">
-      <img src="french2.jpg" alt="description of image">
-      <img src="jap3.jpg" alt="description of image">
-      <img src="french4.jpg" alt="description of image">
-      <img src="spanish1.jpg" alt="description of image">
-      <img src="french6.jpg" alt="description of image">
-      <img src="spanish2.jpg" alt="description of image">
-      <img src="jap2.jpg" alt="description of image">
-      <img src="jap4.jpg" alt="description of image">
-      <img src="spanish4.jpg" alt="description of image">
-    </section>
+    <h2><span></span></h2>
+
+
+    <p>julio 25, 2020 2:39am <br>
+      para mi cumpleaños de 19 años <br>
+      <ul>
+       <li>tomar tiempo para estar afuera</li>
+       <li>un picnic</li>
+       <li>ceviche o salmon para cenar</li>
+       <li>llamar a mis amigos por zoom?</li>
+       <li>ver una pelicula relajante</li>
+       <li>fresas cubiertas en chocolate</li>
+     </ul>
+    </p>
+
+
+
+  <div class="grid-wrapper">
+    <div class= "french-2">
+      <img src="french2.jpg" alt="">
+    </div>
+    <div class="jap-3">
+      <img src="jap3.jpg" alt="">
+    </div>
+    <div class="french-4">
+      <img src="french4.jpg" alt="">
+    </div>
+    <div class="spanish-1">
+      <img src="spanish1.jpg" alt="">
+    </div>
+    <div class="french-6">
+      <img src="french6.jpg" alt="">
+    </div>
+    <div class="spanish-2">
+      <img src="spanish2.jpg" alt="">
+    </div>
+    <div class="jap-2">
+      <img src="jap2.jpg" alt="">
+   </div>
+   <div class="jap-4">
+     <img src="jap4.jpg" alt="">
+   </div>
+   <div class="spanish-4">
+     <img src="spanish4.jpg" alt="">
+   </div>
+ </div>
 
     <div class="hearts-group">
       <img src="https://64.media.tumblr.com/cb8dc32ddf16a1a80e01e742c4063b75/tumblr_p9noqbK0y21qzm8dwo1_500.gifv" alt="a spinning pink glass heart" class="pink-heart">
@@ -67,96 +103,124 @@
     }
   }
 
-  .gallery {
+  .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    z-index: 1;
+
 
   }
 
-  .gallery>img {
-    width: 200px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
+  }
+
+  .gallery > div {
+    width: 200px;
+    height: 200px;
   }
 
   .hearts-group {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+
   }
 
   .blue-heart {
-    height: 115px;
+    height: 50px;
   }
 
   .purple-heart {
-    height: 115px;
+    height: 50px;
   }
 
   .pink-heart {
-    height: 115px;
+    height: 50px;
   }
 
 
 
   h1 {
     color: #FEFEFE;
-    font-size: 40px;
-    font-family:
-    text-align: center;
-    background-image: url(downloads/pink-heart.jpg);
-    padding: 10px;
+    font-size: 50px;
+    font-family: "Cormorant Garamond", serif;
     margin: 30px;
-  }
+    display: flex;
+    justify-content: center;
 
-  p {
-    font-size: 17px;
-    font-family: "DotGothic16", sans-serif;
-    color: #FFFFFF;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 30em;
-    animation: type 4s steps(60, end);
 
   }
 
-  p:nth-child(2) {
-    animation: type2 8s steps(60, end);
-  }
-
-  p a {
+  h2 {
     color: white;
-    text-decoration: none;
+    font-size: 25px;
+    font-family: "Shippori Mincho B1", serif;
+    display: flex;
+    justify-content: center;
+    line-height: 50px;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    margin-right: 40%;
+    border-radius: 10px;
+    border-style: inset;
+    border-color: #EF95B6;
   }
 
-  span {
-    animation: blink 1s infinite;
+ p {
+   visibility: hidden;
+   position: fixed;
+   text-align: center;
+   font-family: sans-serif;
+   font-size: 19px;
+   z-index: 1;
+   color: black;
+   background-color: white;
+ }
+
+.spanish-4::hover > p {
+  visibility: visible;
+
+}
+
+.french-2::hover {
+  background-color: red;
+  z-index: 2;
+}
+
+  span::before {
+    content: "welcome";
+    animation: animate infinite 3s;
+    padding-left: 50px;
   }
 
-  @keyframes type {
-    from {
-      width: 0;
+  @keyframes animate {
+      0% {
+      content: "welcome";
     }
-  }
 
-  @keyframes type2 {
-    0% {
-      width: 0;
+    25% {
+      content: "bienvenido"
     }
 
     50% {
-      width: 0;
+      content: "yokoso"
     }
 
-    100% {
-      width: 100;
+    75% {
+      content: "bienvenue"
     }
+
   }
 
-  @keyframes blink {
-    to {
-      opacity: .0;
-    }
-  }
+
+
 </style>
+
+    
